@@ -6,13 +6,6 @@ use Illuminate\Support\Facades\Http;
 
 class LaravelContactForm
 {
-    public function justDoIt()
-    {
-        $response = Http::get('https://inspiration.goprogram.ai/');
-
-        return $response['quote'] . ' -' . $response['author'];
-    }
-
     public static function useContactForm(string $form)
     {
         app()->singleton($form, function ($app) use ($form) {
@@ -30,7 +23,7 @@ class LaravelContactForm
     {
         $forms = $this->forms();
         foreach ($forms as $form) {
-            if ($form->route === $formName) {
+            if ($form->route() === $formName) {
                 return $form;
             }
         }

@@ -9,6 +9,6 @@ $forms = app()->make(LaravelContactForm::class);
 $forms = $forms->forms();
 
 foreach ($forms as $form) {
-    Route::get('form/' . $form->route, [LaravelContactFormController::class, 'show']);
-    Route::post('form/' . $form->route, [LaravelContactFormController::class, 'create']);
+    Route::get('form/' . $form->route(), [LaravelContactFormController::class, 'show']);
+    Route::post('form/' . $form->route(), [LaravelContactFormController::class, 'create']);
 }
