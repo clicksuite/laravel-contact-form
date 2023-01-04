@@ -1,0 +1,16 @@
+{
+    "name": "clicksuite/laravel-contactform",
+    "description": "A simple laravel package to quickly create and manage contact forms.",
+    "autoload": {
+        "psr-4": {
+            "ClickSuite\\LaravelContactForm\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jamie Morgan-Ward",
+            "email": "jamie@clicksuite.co.nz"
+        }
+    ],
+    "require": {}
+}
