@@ -32,6 +32,6 @@ class NewFormEntry extends Mailable
      */
     public function build()
     {
-        return $this->view('laravel-contact-form::emails.new-entry');
+        return $this->markdown('laravel-contact-form::emails.new-entry');
     }
 }
