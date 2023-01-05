@@ -17,7 +17,7 @@ class CreateContactFormEntryFieldsTable extends Migration
             $table->id();
             $table->foreignId('contact_form_entry_id')->constrained();
             $table->string('form_field')->constrained();
-            $table->string('value')->nullable();
+            $table->string('value', 10000)->nullable();
             $table->boolean('checked')->nullable();
             $table->softDeletes();
             $table->timestamps();
